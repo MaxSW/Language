@@ -6,10 +6,9 @@
 data = {
     "cmn": {
         "name": "Mandarin Chinese",
-        "nat": "1082",
-        "tot": "1120",
+        "nat": "1081.9",
+        "tot": "1120.5",
         "rank": "1",
-        "greeting": "",
         "countries": {
             "CN": 1,
             "TW": 1,
@@ -18,10 +17,9 @@ data = {
     },
     "eng": {
         "name": "English",
-        "nat": "355",
-        "tot": "554",
+        "nat": "355.1",
+        "tot": "553.9",
         "rank": "2",
-        "greeting": "Hello friend",
         "countries": {
             "AG": 1,
             "AU": 1,
@@ -89,21 +87,6 @@ data = {
             "ZW": 1
         }
     },
-    "ita": {
-        "name": "Italian",
-        "nat": "73",
-        "tot": "115",
-        "rank": "12",
-        "greeting": "Ciao amico",
-        "countries": {
-            "IT": 1,
-            "HR": 1,
-            "SM": 1,
-            "SI": 1,
-            "CH": 1,
-            "VA": 1
-        }
-    },
     "spa": {
         "name": "Spanish",
         "nat": "298.7",
@@ -130,7 +113,8 @@ data = {
             "PR": 1,
             "ES": 1,
             "UY": 1,
-            "VE": 1
+            "VE": 1,
+            "": 1
         }
     },
     "hin": {
@@ -171,7 +155,8 @@ data = {
             "BY": 1,
             "KZ": 1,
             "KG": 1,
-            "TJ": 1
+            "TJ": 1,
+            "": 1
         }
     },
     "fre": {
@@ -260,6 +245,20 @@ data = {
             "JP": 1
         }
     },
+    "ita": {
+        "name": "Italian",
+        "nat": "73.4",
+        "tot": "115.3",
+        "rank": "12",
+        "countries": {
+            "IT": 1,
+            "HR": 1,
+            "SM": 1,
+            "SI": 1,
+            "CH": 1,
+            "VA": 1
+        }
+    },
     "per": {
         "name": "Persian",
         "nat": "98.2",
@@ -338,7 +337,7 @@ data = {
         }
     },
     "wch": {
-        "name": "Wu Chinese",
+        "name": "Wu Chinese",
         "nat": "76.4",
         "tot": "78.3",
         "rank": "21",
@@ -514,7 +513,7 @@ data = {
         }
     },
     "hch": {
-        "name": "Hakka Chinese",
+        "name": "Hakka Chinese",
         "nat": "35.1",
         "tot": "36.3",
         "rank": "39",
@@ -576,8 +575,7 @@ data = {
         "tot": "33.7",
         "rank": "45",
         "countries": {
-            "IN": 1,
-            "NE": 1
+            "IN": 1
         }
     },
     "sud": {
@@ -629,7 +627,8 @@ data = {
             "GD": 1,
             "BB": 1,
             "AW": 1,
-            "CW": 1
+            "CW": 1,
+            "": 1
         }
     },
     "fil": {

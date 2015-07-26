@@ -6,7 +6,7 @@ function init() {
         manager.load();
         manager.display();
     });
-    $('#s_lang_map').vectorMap(); 
+    $('#s_lang_map').vectorMap();
 }
 /*Constants*/
 //Approximate world pop from: http://www.worldometers.info/world-population/
@@ -53,93 +53,86 @@ function LanguageManager(idCodes) {
             }
         }
     }
-};
-LanguageManager.prototype.display = function() {
-    if (this.langs.length == 1) {
-    	$("#multiple_lang").hide();
-    	$('#s_lang_map').empty();
-        $('#m_lang_map').empty();
-        var l = this.langs[0];
-        $("#single_lang").show();
-        $("#s_lang_name").text(l.name);
-        //$("#s_lang_greeting").text(l.greeting);	
-        /*The world map*/
-        console.log(l.countries);
-        $('#s_lang_map').vectorMap({
-            map: 'world_mill_en',
-            series: {
-                regions: [{
-                    values: l.countries,
-                    scale: ['#449D48'],
-                }]
+    LanguageManager.prototype.display = function() {
+        if (this.langs.length == 1) {
+            $("#multiple_lang").hide();
+            $('#s_lang_map').empty();
+            $('#m_lang_map').empty();
+            var l = this.langs[0];
+            $("#single_lang").show();
+            $("#s_lang_name").text(l.name);
+            //$("#s_lang_greeting").text(l.greeting);	
+            /*The world map*/
+            console.log(l.countries);
+            $('#s_lang_map').vectorMap({
+                map: 'world_mill_en',
+                series: {
+                    regions: [{
+                        values: l.countries,
+                        scale: ['#449D48'],
+                    }]
+                }
+            });
+            /*The % of world pop bar */
+            var pn = l.nat / worldPopulation;
+            var pf = (l.tot - l.nat) / worldPopulation;
+            var pt = l.tot / worldPopulation;
+            $("#s_lang_bar_nat").css("width", pn * 100 + "%");
+            $("#s_lang_bar_for").css("width", pf * 100 + "%");
+            $("#s_lang_nat").text(l.nat);
+            $("#s_lang_tot").text(l.tot);
+            /*The 1000 people world*/
+            $("#s_lang_people_nat").text(Math.round(pn * 100));
+            $("#s_lang_people_tot").text(Math.round(pt * 100));
+        } else if (this.langs.length == 0) {
+            // Means no language has been selected so we must reset everything
+            $('#s_lang_map').empty();
+            $('#s_lang_map').vectorMap();
+            $("#s_lang_name").text("Please select a language");
+            $("#s_lang_bar_nat").css("width", "0%");
+            $("#s_lang_bar_for").css("width", "0%");
+            $("#s_lang_people_nat").text(0);
+            $("#s_lang_people_tot").text(0);
+            $("#s_lang_nat").text(0);
+            $("#s_lang_tot").text(0);
+        } else {
+            //Display for multiple languages
+            $('#s_lang_map').empty();
+            $('#m_lang_map').empty();
+            $("#single_lang").hide();
+            $("#multiple_lang").show();
+            var countries = {};
+            var nativeSpeakers = 0;
+            $("#m_lang_name").empty();
+            for (i = 0; i < this.langs.length; i++) {
+                //Collects the countries
+                var l = this.langs[i];
+                countries = $.extend(countries, l.countries);
+                //Generates nice title
+                if (i == this.langs.length - 2) {
+                    $("#m_lang_name").append(l.name + " and ");
+                } else if (i == this.langs.length - 1) {
+                    $("#m_lang_name").append(l.name);
+                } else {
+                    $("#m_lang_name").append(l.name + ", ");
+                }
+                //Calculates the total native speakers
+                nativeSpeakers += l.nat;
             }
-        });
-        /*The % of world pop bar */
-        var pn = l.nat / worldPopulation;
-        var pf = (l.tot - l.nat) / worldPopulation;
-       	var pt = l.tot / worldPopulation;
-        $("#s_lang_bar_nat").css("width", pn * 100 + "%");
-        $("#s_lang_bar_for").css("width", pf * 100 + "%");
-
-        $("#s_lang_nat").text(l.nat);
-        $("#s_lang_tot").text(l.tot);
-
-        /*The 1000 people world*/
-        $("#s_lang_people_nat").text(Math.round(pn * 100));
-        $("#s_lang_people_tot").text(Math.round(pt * 100));
-    } else if (this.langs.length == 0) {
-		// Means no language has been selected so we must reset everything
-		$('#s_lang_map').empty();
-		$('#s_lang_map').vectorMap(); 
-		$("#s_lang_name").text("Please select a language");
-		$("#s_lang_bar_nat").css("width","0%");
-        $("#s_lang_bar_for").css("width","0%");
-        $("#s_lang_people_nat").text(0);
-        $("#s_lang_people_tot").text(0);
-        $("#s_lang_nat").text(0);
-        $("#s_lang_tot").text(0);
-    } else {
-        //Display for multiple languages
-        $('#s_lang_map').empty();
-        $('#m_lang_map').empty();
-        $("#single_lang").hide();
-        $("#multiple_lang").show();
-
-        var countries = {};
-        var nativeSpeakers = 0;
-		$("#m_lang_name").empty();
-
-        for(i = 0; i < this.langs.length; i++){
-        	//Collects the countries
-        	var l = this.langs[i];
-			countries = $.extend(countries, l.countries);
-
-			//Generates nice title
-			if(i == this.langs.length - 2){
-				$("#m_lang_name").append(l.name + " and ");
-			}else if(i == this.langs.length -1){
-				$("#m_lang_name").append(l.name);
-			}else{
-				$("#m_lang_name").append(l.name + ", ");
-			}
-
-			//Calculates the total native speakers
-			nativeSpeakers += l.nat;
+            var pn = nativeSpeakers / worldPopulation;
+            console.log(nativeSpeakers + " | " + pn);
+            $("#m_lang_bar_nat").css("width", pn * 100 + "%");
+            $('#m_lang_map').vectorMap({
+                map: 'world_mill_en',
+                series: {
+                    regions: [{
+                        values: countries,
+                        scale: ['#449D48']
+                    }]
+                }
+            });
         }
-        var pn = nativeSpeakers / worldPopulation;
-        console.log(nativeSpeakers + " | " + pn);
-        $("#m_lang_bar_nat").css("width", pn * 100 + "%");
-
-        $('#m_lang_map').vectorMap({
-            map: 'world_mill_en',
-            series: {
-                regions: [{
-                    values: countries,
-                    scale: ['#449D48']              
-                }]
-            }
-        });
-    }
+    };
 };
 /* Boots the app after JQuery has been loaded */
 $(function() {
