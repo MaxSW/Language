@@ -1,0 +1,9 @@
+*{
+	font-family: Helvetica;
+}
+
+.container{
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
