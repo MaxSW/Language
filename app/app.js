@@ -1,5 +1,5 @@
+//Simple error catching for during development
 onerror = errorHandler;
-
 function errorHandler(message, url, line) {
     out = "Error";
     out += "Message: " + message;
@@ -7,6 +7,15 @@ function errorHandler(message, url, line) {
     out += "Line: " + line;
     alert(out);
 }
+
+function init(){
+	$("#single_lang").hide();
+	$("#multiple_lang").hide();
+}
+
+/*Constants*/
+//Approximate world pop from: http://www.worldometers.info/world-population/
+worldPopulation = 7325;
 
 function Language(idCode){
 	this.idCode = idCode;
@@ -42,8 +51,46 @@ function Language(idCode){
 	};
 }
 
+function LanguageManager(idCodes){
+	this.idCodes = idCodes;
+	this.langs = new Array();
+
+	LanguageManager.prototype.load = function(){
+		for(i = 0; i < idCodes.length; i++){
+			var l = new Language(idCodes[i]);
+			l.load();
+			this.langs.push(l);
+		}
+	};
+
+	LanguageManager.prototype.display = function(){
+		if(this.langs.length == 1){
+			var l = this.langs[0];
+			$("#single_lang").show();
+			$("#s_lang_name").text(l.name);
+			$("#s_lang_greeting").text(l.greeting);	
+
+			pn = l.nat / worldPopulation;
+			pf = (l.tot - l.nat) / worldPopulation;
+
+			$("#s_lang_bar_nat").css("width",pn*100 + "%");
+			$("#s_lang_bar_for").css("width",pf*100 + "%");
+
+		}else if(this.langs.length == 0){
+			console.log("Error: trying to display with no languages")
+			return;
+		}else{
+			//Display for multiple languages
+		}
+	};
+}
+
 /* Boots the app after JQuery has been loaded */
 $(function() {
-	lang = new Language("ita");
-	lang.load();
+	init();
+	manager = new LanguageManager(["ita"]);
+	manager.load();
+	manager.display();
+
+
 });
