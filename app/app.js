@@ -58,18 +58,19 @@ LanguageManager.prototype.display = function() {
     if (this.langs.length == 1) {
     	$("#multiple_lang").hide();
     	$('#s_lang_map').empty();
+        $('#m_lang_map').empty();
         var l = this.langs[0];
         $("#single_lang").show();
         $("#s_lang_name").text(l.name);
         //$("#s_lang_greeting").text(l.greeting);	
         /*The world map*/
+        console.log(l.countries);
         $('#s_lang_map').vectorMap({
             map: 'world_mill_en',
             series: {
                 regions: [{
                     values: l.countries,
-                    scale: ['#C8EEFF', '#0071A4'],
-                    normalizeFunction: 'polynomial'
+                    scale: ['#449D48'],
                 }]
             }
         });
@@ -111,7 +112,7 @@ LanguageManager.prototype.display = function() {
         for(i = 0; i < this.langs.length; i++){
         	//Collects the countries
         	var l = this.langs[i];
-			countries = $.extend(l.countries, countries);
+			countries = $.extend(countries, l.countries);
 
 			//Generates nice title
 			if(i == this.langs.length - 2){
@@ -134,8 +135,7 @@ LanguageManager.prototype.display = function() {
             series: {
                 regions: [{
                     values: countries,
-                    scale: ['#C8EEFF', '#0071A4'],
-                    normalizeFunction: 'polynomial'
+                    scale: ['#449D48']              
                 }]
             }
         });

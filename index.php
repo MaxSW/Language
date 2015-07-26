@@ -35,14 +35,54 @@
 	<div class="grid_12">
 		<label>I speak</label>
 		<select id="lang_select" multiple="multiple">
-			<option value="cmn">Mandarin</option>
-			<option value="eng">English</option>
-			<option value="ita">Italian</option>
-			<option value="spa">Spanish</option>
-			<option value="hin">Hindi</option>
-			<option value="por">Portuguese</option>
-			<option value="rus">Russian</option>
-
+			<option value="cmn">Mandarin Chinese</option>
+	        <option value="eng">English</option>
+	        <option value="spa">Spanish</option>
+	        <option value="hin">Hindi</option>
+	        <option value="por">Portugese</option>
+	        <option value="rus">Russian</option>
+	        <option value="fre">French</option>
+	        <option value="ben">Bengali</option>
+	        <option value="mal">Malay</option>
+	        <option value="ger">German</option>
+	        <option value="jap">Japanese</option>
+	        <option value="ita">Italian</option>
+	        <option value="per">Persian</option>
+	        <option value="pun">Punjabi</option>
+	        <option value="urd">Urdu</option>
+	        <option value="mar">Marathi</option>
+	        <option value="tur">Turkish</option>
+	        <option value="tel">Telugu</option>
+	        <option value="ear">Egyptian Arabic</option>
+	        <option value="jav">Javanese</option>
+	        <option value="wch">Wu Chinese</option>
+	        <option value="kor">Korean</option>
+	        <option value="tha">Thai</option>
+	        <option value="vie">Vietnamese</option>
+	        <option value="ych">Yue Chinese</option>
+	        <option value="tam">Tamil</option>
+	        <option value="mag">Maghrebi Arabic</option>
+	        <option value="min">Min Nan Chinese</option>
+	        <option value="pol">Polish</option>
+	        <option value="guj">Gujarati</option>
+	        <option value="jin">Jin Yu Chinese</option>
+	        <option value="ukr">Ukranian</option>
+	        <option value="hau">Hausa</option>
+	        <option value="kan">Kannada</option>
+	        <option value="pas">Pashto</option>
+	        <option value="xch">Xiang Chinese</option>
+	        <option value="lev">Levantine Arabic</option>
+	        <option value="may">Malayalam</option>
+	        <option value="hch">Hakka Chinese</option>
+	        <option value="ber">Berber</option>
+	        <option value="amh">Amharic</option>
+	        <option value="oro">Oromo</option>
+	        <option value="bur">Burmese</option>
+	        <option value="ori">Oriya</option>
+	        <option value="nep">Nepali</option>
+	        <option value="sud">Sudanese</option>
+	        <option value="bho">Bhojpuri</option>
+	        <option value="fil">Filipino</option>
 		</select>
 	</div>
 
@@ -61,7 +101,7 @@
 		 	   <span class="sr-only">Foreign</span>
 		  	</div>
 		</div>
-		<p>Blue: native speaker, orange: foreign speaker</p>
+		<p>Blue: native speakers, orange: foreign speakers</p>
 		<h3>If the world consisted of 100 people:</h3>
 		<p>There would be <span id="s_lang_people_nat">0</span> native speaker(s) and a total of <span id="s_lang_people_tot">0</span> speaker(s)</p>
 	</div>

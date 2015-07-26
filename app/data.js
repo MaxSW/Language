@@ -179,286 +179,466 @@ data = {
         "nat": "108.4",
         "tot": "229.7",
         "rank": "7",
-        "countries": "BE,BJ,BI,CM,CA,CF,TD,KM,CI,CD,CG,DJ,GQ,FR,GA,GG,GN,HT,IT,JE,LU,MG,ML,MU,MC,NE,RW,SN,SC,CH,TG,VU"
+        "countries": {
+            "BE": 1,
+            "BJ": 1,
+            "BI": 1,
+            "CM": 1,
+            "CA": 1,
+            "CF": 1,
+            "TD": 1,
+            "KM": 1,
+            "CI": 1,
+            "CD": 1,
+            "CG": 1,
+            "DJ": 1,
+            "GQ": 1,
+            "FR": 1,
+            "GA": 1,
+            "GG": 1,
+            "GN": 1,
+            "HT": 1,
+            "IT": 1,
+            "JE": 1,
+            "LU": 1,
+            "MG": 1,
+            "ML": 1,
+            "MU": 1,
+            "MC": 1,
+            "NE": 1,
+            "RW": 1,
+            "SN": 1,
+            "SC": 1,
+            "CH": 1,
+            "TG": 1,
+            "VU": 1
+        }
     },
     "ben": {
         "name": "Bengali",
         "nat": "199.7",
         "tot": "215.8",
         "rank": "8",
-        "countries": "BD,IN"
+        "countries": {
+            "BD": 1,
+            "IN": 1
+        }
     },
     "mal": {
         "name": "Malay/Indonesian",
         "nat": "198.5",
         "tot": "203.2",
         "rank": "9",
-        "countries": "MY,BN,SG,ID"
+        "countries": {
+            "MY": 1,
+            "BN": 1,
+            "SG": 1,
+            "ID": 1
+        }
     },
     "ger": {
         "name": "German",
         "nat": "108.3",
         "tot": "172.7",
         "rank": "10",
-        "countries": "AT,BE,DE,LI,LU,IT,CH"
+        "countries": {
+            "AT": 1,
+            "BE": 1,
+            "DE": 1,
+            "LI": 1,
+            "LU": 1,
+            "IT": 1,
+            "CH": 1
+        }
     },
     "jap": {
         "name": "Japanese",
         "nat": "127.2",
         "tot": "135.3",
         "rank": "11",
-        "countries": "JP"
+        "countries": {
+            "JP": 1
+        }
     },
     "per": {
         "name": "Persian",
         "nat": "98.2",
         "tot": "104.3",
         "rank": "13",
-        "countries": "IR,AF,TJ"
+        "countries": {
+            "IR": 1,
+            "AF": 1,
+            "TJ": 1
+        }
     },
     "pun": {
         "name": "Punjabi",
         "nat": "92.4",
         "tot": "102.2",
         "rank": "14",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "urd": {
         "name": "Urdu",
         "nat": "68.9",
         "tot": "101.6",
         "rank": "15",
-        "countries": "PK,FJ"
+        "countries": {
+            "PK": 1,
+            "FJ": 1
+        }
     },
     "mar": {
         "name": "Marathi",
         "nat": "77.7",
         "tot": "91.1",
         "rank": "16",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "tur": {
         "name": "Turkish",
         "nat": "72.4",
         "tot": "90.2",
         "rank": "17",
-        "countries": "MK,XK,BG"
+        "countries": {
+            "MK": 1,
+            "XK": 1,
+            "BG": 1
+        }
     },
     "tel": {
         "name": "Telugu",
         "nat": "72.8",
         "tot": "80.9",
         "rank": "18",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "ear": {
         "name": "Egyptian Arabic",
         "nat": "48.7",
         "tot": "80.5",
         "rank": "19",
-        "countries": "EG"
+        "countries": {
+            "EG": 1
+        }
     },
     "jav": {
         "name": "Javanese",
         "nat": "77.8",
         "tot": "80.3",
         "rank": "20",
-        "countries": "ID"
+        "countries": {
+            "ID": 1
+        }
     },
     "wch": {
-        "name": "Wu�Chinese",
+        "name": "Wu Chinese",
         "nat": "76.4",
         "tot": "78.3",
         "rank": "21",
-        "countries": "CN"
+        "countries": {
+            "CN": 1
+        }
     },
     "kor": {
         "name": "Korean",
         "nat": "76.7",
         "tot": "78.1",
         "rank": "22",
-        "countries": "KP,KR"
+        "countries": {
+            "KP": 1,
+            "KR": 1
+        }
     },
     "tha": {
         "name": "Thai",
         "nat": "31.8",
         "tot": "73.3",
         "rank": "23",
-        "countries": "TH"
+        "countries": {
+            "TH": 1
+        }
     },
     "vie": {
         "name": "Vietnamese",
         "nat": "69.1",
         "tot": "73.2",
         "rank": "24",
-        "countries": "VN"
+        "countries": {
+            "VN": 1
+        }
     },
     "ych": {
         "name": "Yue Chinese (Cantonese)",
         "nat": "69.7",
         "tot": "72.2",
         "rank": "25",
-        "countries": "CN,SG"
+        "countries": {
+            "CN": 1,
+            "SG": 1
+        }
     },
     "tam": {
         "name": "Tamil",
         "nat": "65.7",
         "tot": "71.8",
         "rank": "26",
-        "countries": "IN,SG,LK"
+        "countries": {
+            "IN": 1,
+            "SG": 1,
+            "LK": 1
+        }
     },
     "mag": {
         "name": "Maghrebi Arabic",
         "nat": "53.5",
         "tot": "62.4",
         "rank": "27",
-        "countries": "MA,DZ,TN,LY"
+        "countries": {
+            "MA": 1,
+            "DZ": 1,
+            "TN": 1,
+            "LY": 1
+        }
     },
     "min": {
         "name": "Min Nan Chinese",
         "nat": "48.2",
         "tot": "50.9",
         "rank": "28",
-        "countries": "CN"
+        "countries": {
+            "CN": 1
+        }
     },
     "pol": {
         "name": "Polish",
         "nat": "43.6",
         "tot": "50.1",
         "rank": "29",
-        "countries": "PL"
+        "countries": {
+            "PL": 1
+        }
     },
     "guj": {
         "name": "Gujarati",
         "nat": "47.4",
         "tot": "49.3",
         "rank": "30",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "jin": {
         "name": "Jin Yu Chinese",
         "nat": "43.3",
         "tot": "46.9",
         "rank": "31",
-        "countries": "CN"
+        "countries": {
+            "CN": 1
+        }
     },
     "ukr": {
         "name": "Ukrainian",
         "nat": "42.7",
         "tot": "46.6",
         "rank": "32",
-        "countries": "UA"
+        "countries": {
+            "UA": 1
+        }
     },
     "hau": {
         "name": "Hausa",
         "nat": "25.2",
         "tot": "42.1",
         "rank": "33",
-        "countries": "NE,NG,GH,BJ,CM,CI,SD,TG"
+        "countries": {
+            "NE": 1,
+            "NG": 1,
+            "GH": 1,
+            "BJ": 1,
+            "CM": 1,
+            "CI": 1,
+            "SD": 1,
+            "TG": 1
+        }
     },
     "kan": {
         "name": "Kannada",
         "nat": "33.7",
         "tot": "41.7",
         "rank": "34",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "pas": {
         "name": "Pashto",
         "nat": "31.4",
         "tot": "41.1",
         "rank": "35",
-        "countries": "AF"
+        "countries": {
+            "AF": 1
+        }
     },
     "xch": {
         "name": "Xiang Chinese",
         "nat": "37.2",
         "tot": "39.9",
         "rank": "36",
-        "countries": "CN"
+        "countries": {
+            "CN": 1
+        }
     },
     "lev": {
         "name": "Levantine Arabic",
         "nat": "34.8",
         "tot": "39.3",
         "rank": "37",
-        "countries": "CY"
+        "countries": {
+            "CY": 1
+        }
     },
     "may": {
         "name": "Malayalam",
         "nat": "34.9",
         "tot": "39.1",
         "rank": "38",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "hch": {
-        "name": "Hakka�Chinese",
+        "name": "Hakka Chinese",
         "nat": "35.1",
         "tot": "36.3",
         "rank": "39",
-        "countries": "CN"
+        "countries": {
+            "CN": 1
+        }
     },
     "ber": {
         "name": "Berber",
         "nat": "31.4",
         "tot": "36",
         "rank": "40",
-        "countries": "MA,DZ"
+        "countries": {
+            "MA": 1,
+            "DZ": 1
+        }
     },
     "amh": {
         "name": "Amharic",
         "nat": "28.2",
         "tot": "35.6",
         "rank": "41",
-        "countries": "ET"
+        "countries": {
+            "ET": 1
+        }
     },
     "oro": {
         "name": "Oromo",
         "nat": "33.8",
         "tot": "35.4",
         "rank": "42",
-        "countries": "ET,KE,SO"
+        "countries": {
+            "ET": 1,
+            "KE": 1,
+            "SO": 1
+        }
     },
     "bur": {
         "name": "Burmese",
         "nat": "33.5",
         "tot": "35.1",
         "rank": "43",
-        "countries": "MM"
+        "countries": {
+            "MM": 1
+        }
     },
     "ori": {
         "name": "Oriya",
         "nat": "32",
         "tot": "34.3",
         "rank": "44",
-        "countries": "IN"
+        "countries": {
+            "IN": 1
+        }
     },
     "nep": {
         "name": "Nepali",
         "nat": "26.1",
         "tot": "33.7",
         "rank": "45",
-        "countries": "IN"
+        "countries": {
+            "IN": 1,
+            "NE": 1
+        }
     },
     "sud": {
         "name": "Sudanese",
         "nat": "26.8",
         "tot": "33.6",
         "rank": "46",
-        "countries": "SD"
+        "countries": {
+            "SD": 1
+        }
     },
     "bho": {
         "name": "Bhojpuri",
         "nat": "28.7",
         "tot": "32.8",
         "rank": "47",
-        "countries": "IN,NP,BD,MU,TT,GY,SR,JM,BS,CU,HT,DO,JM,KY,TC,PR,FJ,VI,VG,AI,AG,MF,SX,BL,KN,MS,GP,DM,MQ,LC,VC,GD,BB,AW,CW,"
+        "countries": {
+            "IN": 1,
+            "NP": 1,
+            "BD": 1,
+            "MU": 1,
+            "TT": 1,
+            "GY": 1,
+            "SR": 1,
+            "JM": 1,
+            "BS": 1,
+            "CU": 1,
+            "HT": 1,
+            "DO": 1,
+            "JM": 1,
+            "KY": 1,
+            "TC": 1,
+            "PR": 1,
+            "FJ": 1,
+            "VI": 1,
+            "VG": 1,
+            "AI": 1,
+            "AG": 1,
+            "MF": 1,
+            "SX": 1,
+            "BL": 1,
+            "KN": 1,
+            "MS": 1,
+            "GP": 1,
+            "DM": 1,
+            "MQ": 1,
+            "LC": 1,
+            "VC": 1,
+            "GD": 1,
+            "BB": 1,
+            "AW": 1,
+            "CW": 1
+        }
     },
     "fil": {
         "name": "Filipino",
         "nat": "23.7",
         "tot": "31.9",
         "rank": "48",
-        "countries": "PH"
+        "countries": {
+            "PH": 1
+        }
     }
 };
