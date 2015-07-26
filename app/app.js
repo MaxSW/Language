@@ -120,7 +120,6 @@ function LanguageManager(idCodes) {
                 nativeSpeakers += l.nat;
             }
             var pn = nativeSpeakers / worldPopulation;
-            console.log(nativeSpeakers + " | " + pn);
             $("#m_lang_bar_nat").css("width", pn * 100 + "%");
             $('#m_lang_map').vectorMap({
                 map: 'world_mill_en',

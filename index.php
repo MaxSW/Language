@@ -83,6 +83,23 @@
 	        <option value="sud">Sudanese</option>
 	        <option value="bho">Bhojpuri</option>
 	        <option value="fil">Filipino</option>
+	       	<option value="bul">Bulgarian</option>
+	        <option value="cr0">Croation</option>
+	        <option value="cze">Czech</option>
+	        <option value="dan">Danish</option>
+	        <option value="dut">Dutch</option>
+	        <option value="est">Estonian</option>
+	        <option value="fin">Finnish</option>
+	        <option value="gre">Greek</option>
+	        <option value="hun">Hungarian</option>
+	        <option value="iri">Irish</option>
+	        <option value="lat">Latvian</option>
+	        <option value="lit">Lithuanian</option>
+	        <option value="rom">Romanian</option>
+	        <option value="slo">Slovak</option>
+	        <option value="sln">Slovenian</option>
+	        <option value="swe">Swedish</option>
+
 		</select>
 	</div>
 

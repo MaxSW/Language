@@ -1,8 +1,3 @@
-/* 
-	All of the data used by the app
-	All numbers are in millions, i.e. 10 native speakers = 10,000,000 native speakers
-	Sources: *TODO*
-*/
 data = {
     "cmn": {
         "name": "Mandarin Chinese",
@@ -638,6 +633,158 @@ data = {
         "rank": "48",
         "countries": {
             "PH": 1
+        }
+    },
+    "bul": {
+        "name": "Bulgarian",
+        "nat": "7.8",
+        "tot": "7.8",
+        "rank": "",
+        "countries": {
+            "BG": 1
+        }
+    },
+    "cro": {
+        "name": "Croatian",
+        "nat": "5.6",
+        "tot": "6.85",
+        "rank": "",
+        "countries": {
+            "HR": 1,
+            "BA": 1
+        }
+    },
+    "cze": {
+        "name": "Czech",
+        "nat": "11",
+        "tot": "11",
+        "rank": "",
+        "countries": {
+            "CZ": 1,
+            "SK": 1
+        }
+    },
+    "dan": {
+        "name": "Danish",
+        "nat": "5.5",
+        "tot": "5.5",
+        "rank": "",
+        "countries": {
+            "DK": 1
+        }
+    },
+    "dut": {
+        "name": "Dutch",
+        "nat": "22",
+        "tot": "28",
+        "rank": "",
+        "countries": {
+            "BE": 1,
+            " NL": 1,
+            "SR": 1
+        }
+    },
+    "est": {
+        "name": "Estonian",
+        "nat": "1.2",
+        "tot": "1.2",
+        "rank": "",
+        "countries": {
+            "EE": 1
+        }
+    },
+    "fin": {
+        "name": "Finnish",
+        "nat": "5.4",
+        "tot": "5.4",
+        "rank": "",
+        "countries": {
+            "FI": 1
+        }
+    },
+    "gre": {
+        "name": "Greek",
+        "nat": "13",
+        "tot": "13",
+        "rank": "",
+        "countries": {
+            "GR": 1
+        }
+    },
+    "hun": {
+        "name": "Hungarian",
+        "nat": "13",
+        "tot": "13",
+        "rank": "",
+        "countries": {
+            "HU": 1
+        }
+    },
+    "iri": {
+        "name": "Irish",
+        "nat": "0.14",
+        "tot": "1.2",
+        "rank": "",
+        "countries": {
+            "IE": 1,
+            "GB": 1
+        }
+    },
+    "lat": {
+        "name": "Latvian",
+        "nat": "1.75",
+        "tot": "1.75",
+        "rank": "",
+        "countries": {
+            "LV": 1
+        }
+    },
+    "lit": {
+        "name": "Lithuanian",
+        "nat": "3",
+        "tot": "3",
+        "rank": "",
+        "countries": {
+            "LT": 1
+        }
+    },
+    "rom": {
+        "name": "Romanian",
+        "nat": "24",
+        "tot": "28",
+        "rank": "",
+        "countries": {
+            "RO": 1,
+            "MD": 1
+        }
+    },
+    "slo": {
+        "name": "Slovak",
+        "nat": "5.2",
+        "tot": "5.2",
+        "rank": "",
+        "countries": {
+            "SK": 1,
+            "CZ": 1
+        }
+    },
+    "sln": {
+        "name": "Slovenian",
+        "nat": "2.5",
+        "tot": "2.5",
+        "rank": "",
+        "countries": {
+            "SI": 1
+        }
+    },
+    "swe": {
+        "name": "Swedish",
+        "nat": "9.2",
+        "tot": "9.2",
+        "rank": "",
+        "countries": {
+            "SE": 1,
+            "FI": 1
         }
     }
 };

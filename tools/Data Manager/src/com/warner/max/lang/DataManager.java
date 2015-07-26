@@ -48,7 +48,7 @@ public class DataManager {
 							c.trim();
 							countries[j - 5] = c;
 						} else {
-							c = c.replaceAll("\\s+", "-").replaceAll("\"", "");
+							c = c.replaceAll("\\s+", "").replaceAll("\"", "");
 							countries[j - 5] = c;
 						}
 					}
