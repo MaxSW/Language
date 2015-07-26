@@ -68,13 +68,32 @@ function LanguageManager(idCodes){
 			var l = this.langs[0];
 			$("#single_lang").show();
 			$("#s_lang_name").text(l.name);
-			$("#s_lang_greeting").text(l.greeting);	
+			//$("#s_lang_greeting").text(l.greeting);	
+			/*The world map*/
+			console.log(l.countries);
+			$('#s_lang_map').vectorMap({
+				map: 'world_mill_en',
+				series: {
+				  	regions: [{
+				      	values: l.countries,
+      					scale: ['#C8EEFF', '#0071A4'],
+				     	normalizeFunction: 'polynomial'
+				    }]
+				}
+			});
 
+
+			/*The % of world pop bar */
 			pn = l.nat / worldPopulation;
 			pf = (l.tot - l.nat) / worldPopulation;
+			pt = l.tot / worldPopulation;
 
 			$("#s_lang_bar_nat").css("width",pn*100 + "%");
 			$("#s_lang_bar_for").css("width",pf*100 + "%");
+
+			/*The 1000 people world*/
+			$("#s_lang_people_nat").text(Math.round(pn * 100));
+			$("#s_lang_people_tot").text(Math.round(pt * 100));
 
 		}else if(this.langs.length == 0){
 			console.log("Error: trying to display with no languages")
@@ -88,7 +107,7 @@ function LanguageManager(idCodes){
 /* Boots the app after JQuery has been loaded */
 $(function() {
 	init();
-	manager = new LanguageManager(["ita"]);
+	manager = new LanguageManager(["eng"]);
 	manager.load();
 	manager.display();
 
