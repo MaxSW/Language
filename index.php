@@ -20,7 +20,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 
 <!-- 960 GS -->
-<link rel="stylesheet" href="css/960.css" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.min.css" type="text/css"/>
 
 
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
