@@ -38,14 +38,21 @@
 			<option value="cmn">Mandarin</option>
 			<option value="eng">English</option>
 			<option value="ita">Italian</option>
+			<option value="spa">Spanish</option>
+			<option value="hin">Hindi</option>
+			<option value="por">Portuguese</option>
+			<option value="rus">Russian</option>
+
 		</select>
 	</div>
 
 	<!-- Shown if only 1 language is selected. Hidden by default -->
 	<div id="single_lang" class="grid_12">
 		<h2 id="s_lang_name">Please select a language</h2>
-		 <div id="s_lang_map" style="height: 400px"></div>
-		<h3>% of the world who speak your language:</h3>
+		<h3>Countries that have official an language you speak:</h3>
+		<div id="s_lang_map" style="height: 400px"></div>
+		<h3>Speakers of your language:</h3>
+		<p><span id="s_lang_nat">0</span> million native speakers and <span id="s_lang_tot">0</span> million total speakers</p>
 		<div id="s_lang_bar" class="progress">
 		  	<div id="s_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
 		    	<span class="sr-only">Native</span>
@@ -54,14 +61,22 @@
 		 	   <span class="sr-only">Foreign</span>
 		  	</div>
 		</div>
-		<p>Blue = native speaker, Orange = foreign speaker</p>
+		<p>Blue: native speaker, orange: foreign speaker</p>
 		<h3>If the world consisted of 100 people:</h3>
 		<p>There would be <span id="s_lang_people_nat">0</span> native speaker(s) and a total of <span id="s_lang_people_tot">0</span> speaker(s)</p>
 	</div>
 
 	<!-- Shown if multiple languages are selected. Hidden by default -->
-	<div id="multiple_lang">
-		<h2 id="m_language_name">Multiple languages</h2>
+	<div id="multiple_lang" class="grid_12">
+		<h2 id="m_lang_name">Please select a language</h2>
+		<h3>Countries that have official an language you speak:</h3>
+		<div id="m_lang_map" style="height: 400px"></div>
+		<h3>Native speakers of your languages:</h3>
+		<div id="m_lang_bar" class="progress">
+		  	<div id="m_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
+		    	<span class="sr-only">Native</span>
+		 	</div>
+		 </div>
 	</div>
 
 
