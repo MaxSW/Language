@@ -13,3 +13,7 @@ h2{
 h3{
 	font-size:20px;
 }
+
+#lang_select{
+	width: 500px;
+}

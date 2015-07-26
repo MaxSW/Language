@@ -32,10 +32,18 @@
 	<div class="grid_12" id="header">
 		<h1>Site Title</h1>
 	</div>
-	
+	<div class="grid_12">
+		<label>I speak</label>
+		<select id="lang_select" multiple="multiple">
+			<option value="cmn">Mandarin</option>
+			<option value="eng">English</option>
+			<option value="ita">Italian</option>
+		</select>
+	</div>
+
 	<!-- Shown if only 1 language is selected. Hidden by default -->
 	<div id="single_lang" class="grid_12">
-		<h2 id="s_lang_name">Single language</h2>
+		<h2 id="s_lang_name">Please select a language</h2>
 		 <div id="s_lang_map" style="height: 400px"></div>
 		<h3>% of the world who speak your language:</h3>
 		<div id="s_lang_bar" class="progress">
@@ -48,7 +56,7 @@
 		</div>
 		<p>Blue = native speaker, Orange = foreign speaker</p>
 		<h3>If the world consisted of 100 people:</h3>
-		<p>There would be <span id="s_lang_people_nat">x</span> native speaker(s) and a total of <span id="s_lang_people_tot">y</span> speaker(s)</p>
+		<p>There would be <span id="s_lang_people_nat">0</span> native speaker(s) and a total of <span id="s_lang_people_tot">0</span> speaker(s)</p>
 	</div>
 
 	<!-- Shown if multiple languages are selected. Hidden by default -->
