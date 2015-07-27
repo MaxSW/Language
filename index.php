@@ -33,10 +33,10 @@
 		<h1>Site Title</h1>
 	</div>
 	<div class="grid_12">
-		<label>I speak</label>
+		<label id="i_speak">I speak</label>
 		<select id="lang_select" multiple="multiple">
 			<option value="cmn">Mandarin Chinese</option>
-	        <option value="eng">English</option>
+	        <option value="eng" selected>English</option>
 	        <option value="spa">Spanish</option>
 	        <option value="hin">Hindi</option>
 	        <option value="por">Portugese</option>
@@ -106,10 +106,10 @@
 	<!-- Shown if only 1 language is selected. Hidden by default -->
 	<div id="single_lang" class="grid_12">
 		<h2 id="s_lang_name">Please select a language</h2>
-		<h3>Countries that have official an language you speak:</h3>
+		<h4>Countries that have official an language you speak:</h4>
 		<div id="s_lang_map" style="height: 400px"></div>
-		<h3>Speakers of your language:</h3>
-		<p><span id="s_lang_nat">0</span> million native speakers and <span id="s_lang_tot">0</span> million total speakers</p>
+		<h4>Speakers of your language:</h4>
+		<p><span class="data" id="s_lang_nat">0</span> million native speakers and <span class="data" id="s_lang_tot">0</span> million total speakers</p>
 		<div id="s_lang_bar" class="progress">
 		  	<div id="s_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
 		    	<span class="sr-only">Native</span>
@@ -118,22 +118,41 @@
 		 	   <span class="sr-only">Foreign</span>
 		  	</div>
 		</div>
-		<p>Blue: native speakers, orange: foreign speakers</p>
-		<h3>If the world consisted of 100 people:</h3>
-		<p>There would be <span id="s_lang_people_nat">0</span> native speaker(s) and a total of <span id="s_lang_people_tot">0</span> speaker(s)</p>
+		<p class="small">Blue: native speakers Orange: foreign speakers</p>
+		<h4>If the world consisted of 100 people:</h4>
+		<p>There would be <span class="data" id="s_lang_people_nat">0</span> native speaker(s) and a total of <span class="data" id="s_lang_people_tot">0</span> speaker(s)</p>
 	</div>
 
 	<!-- Shown if multiple languages are selected. Hidden by default -->
 	<div id="multiple_lang" class="grid_12">
 		<h2 id="m_lang_name">Please select a language</h2>
-		<h3>Countries that have official an language you speak:</h3>
+		<h4>Countries that have official an language you speak:</h4>
 		<div id="m_lang_map" style="height: 400px"></div>
-		<h3>Native speakers of your languages:</h3>
+		<h4>Speakers of your languages:</h4>
+		<p><span class="data" id="m_lang_nat">0</span> million native speakers which is <span class="data" id="m_lang_per">0</span>% of the world's population</p>
 		<div id="m_lang_bar" class="progress">
 		  	<div id="m_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
 		    	<span class="sr-only">Native</span>
 		 	</div>
 		 </div>
+		 <p>There are between <span class="data" id="m_lang_tot_min">0</span> million and <span class="data" id="m_lang_tot_max">0</span> million total speakers of your languages. 
+		 <a tabindex="0" id="inaccurate_popover" class="btn btn-info" role="button" data-placement="top" data-toggle="popover" data-trigger="focus" title="The inaccuracy of Total Speakers for Multiple Languages:" data-content="We only have the data for the total speakers of each language individually. Unfortunately the totals for different langauges may overlap as someone can speak 2 langauges, therefore we only show you the min (native speakers) and max (total speakers added together for each language) values">Why so inaccurate?</a>
+
+		 </p>
+		<div id="m_lang_bar" class="progress">
+			<div id="m_lang_bar_tot_min" class="progress-bar progress-bar-info" style="width: 0%"></div>
+			 <div id="m_lang_bar_tot_max" class="progress-bar progress-bar-warning" style="width: 0%"></div>
+		</div>
+		<p class="small">Blue: minimum total speakers. Blue & orange: maximum total speakers</p>
+
+		<h4>If the world consisted of 100 people:</h4>
+		<p>There would be <span class="data" id="m_lang_people_nat">0</span> native speaker(s)</p>
+
+		<hr />
+		<h3>Language Breakdown</h3>
+		<p class="small">Blue: native speakers. Orange: foreign speakers</p>
+		<div id="m_lang_split">
+		</div>
 	</div>
 
 

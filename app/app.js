@@ -7,6 +7,7 @@ function init() {
         manager.display();
     });
     $('#s_lang_map').vectorMap();
+    $('#inaccurate_popover').popover();
 }
 /*Constants*/
 //Approximate world pop from: http://www.worldometers.info/world-population/
@@ -63,7 +64,6 @@ function LanguageManager(idCodes) {
             $("#s_lang_name").text(l.name);
             //$("#s_lang_greeting").text(l.greeting);	
             /*The world map*/
-            console.log(l.countries);
             $('#s_lang_map').vectorMap({
                 map: 'world_mill_en',
                 series: {
@@ -99,10 +99,12 @@ function LanguageManager(idCodes) {
             //Display for multiple languages
             $('#s_lang_map').empty();
             $('#m_lang_map').empty();
+            $("#m_lang_split").empty();
             $("#single_lang").hide();
             $("#multiple_lang").show();
             var countries = {};
-            var nativeSpeakers = 0;
+            var nativeSpeakers = 0,
+                totalSpeakers = 0;
             $("#m_lang_name").empty();
             for (i = 0; i < this.langs.length; i++) {
                 //Collects the countries
@@ -118,9 +120,17 @@ function LanguageManager(idCodes) {
                 }
                 //Calculates the total native speakers
                 nativeSpeakers += l.nat;
+                totalSpeakers += l.tot;
             }
             var pn = nativeSpeakers / worldPopulation;
+            $("#m_lang_nat").text(Math.round(nativeSpeakers));
+            $("#m_lang_per").text(Math.round(pn * 100, 1));
+            $("#m_lang_people_nat").text(Math.round(pn * 100, 1));
             $("#m_lang_bar_nat").css("width", pn * 100 + "%");
+            $("#m_lang_bar_tot_min").css("width", pn * 100 + "%");
+            $("#m_lang_bar_tot_max").css("width", ((totalSpeakers / worldPopulation) - pn) * 100 + "%");
+            $("#m_lang_tot_min").text(Math.round(nativeSpeakers));
+            $("#m_lang_tot_max").text(Math.round(totalSpeakers));
             $('#m_lang_map').vectorMap({
                 map: 'world_mill_en',
                 series: {
@@ -130,7 +140,16 @@ function LanguageManager(idCodes) {
                     }]
                 }
             });
-        }
+            /* Deal with the langauge breakdown */
+            var breakdownDiv = $("#m_lang_split");
+            for (k = 0; k < this.langs.length; k++) {
+                var l = this.langs[k];
+                breakdownDiv.append("<h4>" + l.name + "</h4>");
+                breakdownDiv.append("<div id = \"m_lang_bar_" + l.idCode + "\" class=\"progress\"> <div id = \"m_lang_bar_" + l.idCode + "_nat\" class=\"progress-bar progress-bar-info\" style=\"width: 0%\"></div> <div id = \"m_lang_bar_" + l.idCode + "_tot\" class=\"progress-bar progress-bar-warning\" style=\"width: 0%\"></div></div>");
+                $("#m_lang_bar_" + l.idCode + "_nat").css("width", (l.nat / worldPopulation) * 100 + "%");
+                $("#m_lang_bar_" + l.idCode + "_tot").css("width", ((l.tot - l.nat) / worldPopulation) * 100 + "%");
+            }
+        };
     };
 };
 /* Boots the app after JQuery has been loaded */

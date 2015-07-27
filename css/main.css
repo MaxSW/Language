@@ -8,16 +8,47 @@ h1{
 
 h2{
 	font-size:28px;
+	text-align: center;
+	color:#1976D2;
+	font-weight: bold;
 }
 
 h3{
 	font-size:24px;
+	font-weight: normal;
+	text-align: center;
+}
+
+
+h4{
+	font-size:20px;
+	font-weight: normal;
 }
 
 p{
 	font-size: 18px;
 }
 
+hr{
+	border-width: 1px;
+	border-color: #B6B6B6;
+}
+
+.small{
+	font-size: 14px;
+}
+
+.data{
+	font-weight:bold;
+	color:#1976D2;
+	font-size: 20px;
+}
+
 #lang_select{
 	width: 500px;
+}
+
+#i_speak{
+	font-weight: normal;
+	font-size: 20px;
 }
