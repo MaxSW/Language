@@ -22,6 +22,8 @@
 <!-- 960 GS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.min.css" type="text/css"/>
 
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="css/main.css" type="text/css"/>
 <script src="app/data.js"></script>
@@ -30,11 +32,10 @@
 <body>
 <div class="container_12">
 	<div class="grid_12" id="header">
-		<h1>Site Title</h1>
+		<h1>Spoken Passport</h1>
 	</div>
-	<div class="grid_12">
-		<label id="i_speak">I speak</label>
-		<select id="lang_select" multiple="multiple">
+	<div class="grid_12" id="selector-section">
+		<select id="lang_select" multiple="multiple" value="I speak">
 			<option value="cmn">Mandarin Chinese</option>
 	        <option value="eng" selected>English</option>
 	        <option value="spa">Spanish</option>
@@ -102,13 +103,12 @@
 
 		</select>
 	</div>
-
 	<!-- Shown if only 1 language is selected. Hidden by default -->
 	<div id="single_lang" class="grid_12">
-		<h2 id="s_lang_name">Please select a language</h2>
-		<h4>Countries that have official an language you speak:</h4>
-		<div id="s_lang_map" style="height: 400px"></div>
-		<h4>Speakers of your language:</h4>
+		<h2 ><span id="s_lang_name">Please select a language</span></h2>
+			<div id="s_lang_map" style="height: 400px"></div>
+				<h3><span>Speakers</span></h3>
+
 		<p><span class="data" id="s_lang_nat">0</span> million native speakers and <span class="data" id="s_lang_tot">0</span> million total speakers</p>
 		<div id="s_lang_bar" class="progress">
 		  	<div id="s_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
@@ -121,14 +121,18 @@
 		<p class="small">Blue: native speakers Orange: foreign speakers</p>
 		<h4>If the world consisted of 100 people:</h4>
 		<p>There would be <span class="data" id="s_lang_people_nat">0</span> native speaker(s) and a total of <span class="data" id="s_lang_people_tot">0</span> speaker(s)</p>
+
+		<h3><span>Technology</span></h3>
+<br />
+		<h3><span>Business / Econonomics</span></h3>
+
 	</div>
 
 	<!-- Shown if multiple languages are selected. Hidden by default -->
 	<div id="multiple_lang" class="grid_12">
-		<h2 id="m_lang_name">Please select a language</h2>
-		<h4>Countries that have official an language you speak:</h4>
+		<h2 ><span id="m_lang_name">Please select a language</span></h2>
 		<div id="m_lang_map" style="height: 400px"></div>
-		<h4>Speakers of your languages:</h4>
+		<h3><span>Speakers</span></h4>
 		<p><span class="data" id="m_lang_nat">0</span> million native speakers which is <span class="data" id="m_lang_per">0</span>% of the world's population</p>
 		<div id="m_lang_bar" class="progress">
 		  	<div id="m_lang_bar_nat" class="progress-bar progress-bar-info" style="width: 0%">
@@ -145,11 +149,7 @@
 		</div>
 		<p class="small">Blue: minimum total speakers. Blue & orange: maximum total speakers</p>
 
-		<h4>If the world consisted of 100 people:</h4>
-		<p>There would be <span class="data" id="m_lang_people_nat">0</span> native speaker(s)</p>
-
-		<hr />
-		<h3>Language Breakdown</h3>
+		<h3 id="m_lang_break_title"><span>Language Breakdown<span></h3>
 		<p class="small">Blue: native speakers. Orange: foreign speakers</p>
 		<div id="m_lang_split">
 		</div>

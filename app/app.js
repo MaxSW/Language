@@ -1,7 +1,7 @@
 function init() {
     $("#multiple_lang").hide();
     //Listener for whenever the selected language(s) change
-    $("#lang_select").select2().on("change", function(e) {
+    $("#lang_select").select2({placeholder: "I speak"}).on("change", function(e) {
         manager = new LanguageManager($("#lang_select").val());
         manager.load();
         manager.display();
@@ -125,7 +125,6 @@ function LanguageManager(idCodes) {
             var pn = nativeSpeakers / worldPopulation;
             $("#m_lang_nat").text(Math.round(nativeSpeakers));
             $("#m_lang_per").text(Math.round(pn * 100, 1));
-            $("#m_lang_people_nat").text(Math.round(pn * 100, 1));
             $("#m_lang_bar_nat").css("width", pn * 100 + "%");
             $("#m_lang_bar_tot_min").css("width", pn * 100 + "%");
             $("#m_lang_bar_tot_max").css("width", ((totalSpeakers / worldPopulation) - pn) * 100 + "%");
@@ -149,14 +148,15 @@ function LanguageManager(idCodes) {
                 $("#m_lang_bar_" + l.idCode + "_nat").css("width", (l.nat / worldPopulation) * 100 + "%");
                 $("#m_lang_bar_" + l.idCode + "_tot").css("width", ((l.tot - l.nat) / worldPopulation) * 100 + "%");
             }
+
         };
     };
 };
 /* Boots the app after JQuery has been loaded */
 $(function() {
     init();
-    /*manager = new LanguageManager(["eng"]);
-	manager.load();
-	manager.display();
-*/
+    //For testing purposes load a language as default
+    manager = new LanguageManager($("#lang_select").val());
+    manager.load();
+    manager.display();
 });

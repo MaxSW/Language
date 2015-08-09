@@ -508,7 +508,7 @@ data = {
         }
     },
     "hch": {
-        "name": "Hakka Chinese",
+        "name": "Hakka Chinese",
         "nat": "35.1",
         "tot": "36.3",
         "rank": "39",

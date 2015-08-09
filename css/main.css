@@ -1,22 +1,50 @@
 *{
-	font-family: Helvetica;
-}
+font-family: 'Roboto', sans-serif;}
 
 h1{
-	font-size:32px;
+	font-size:36px;
+	margin-bottom: 10px;
+	text-align: center;
+		font-weight: bold;
+
+	color:#00BCD4;
 }
 
 h2{
-	font-size:28px;
+	font-size:36px;
 	text-align: center;
 	color:#1976D2;
 	font-weight: bold;
 }
 
+
+
 h3{
-	font-size:24px;
-	font-weight: normal;
+	font-size:32px;
+	font-weight: bold;
 	text-align: center;
+	color:#1976D2;
+}
+
+h3,h2 {
+   width: 100%; 
+   border-bottom: 1px solid #909090; 
+   line-height: 0.1em;
+   margin-top:30px;
+   margin-bottom:20px;
+
+} 
+
+h2 span { 
+    background:#fff; 
+    padding-right:15px;
+    padding-left:15px;
+}
+
+h3 span { 
+    background:#fff;
+    padding-right:15px;
+    padding-left:15px; 
 }
 
 
@@ -44,11 +72,17 @@ hr{
 	font-size: 20px;
 }
 
+#selector-section{
+	text-align: center;
+}
+
 #lang_select{
-	width: 500px;
+	width:500px;
 }
 
 #i_speak{
 	font-weight: normal;
 	font-size: 20px;
+	text-align: center;
 }
+
